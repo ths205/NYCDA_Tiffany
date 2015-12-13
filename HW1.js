@@ -226,14 +226,14 @@ self.addfile=function()
        var z=document.getElementById("dairy_id").checked;
        	
        	
-       	 if (x)
-       	{
+       	     if (x)
+       	     {
        			
 
 	         self.fruitarray.push(self.input_text);
 	        
 	         
-	    }  
+	     }  
 	     
 
 	     else if (y)
