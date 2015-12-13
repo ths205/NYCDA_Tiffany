@@ -221,12 +221,12 @@ self.addfile=function()
     {
        //self.item=angular.element(document.getElementsByName('file_name')).value;
     
-       var x=document.getElementById("fruit_id").checked;
-       var y=document.getElementById("veg_id").checked;
-       var z=document.getElementById("dairy_id").checked;
+       self.is_fruit=document.getElementById("fruit_id").checked;
+       self.is_veg=document.getElementById("veg_id").checked;
+       self.is_dairy=document.getElementById("dairy_id").checked;
        	
        	
-       	     if (x)
+       	     if (self.is_fruit)
        	     {
        			
 
@@ -236,7 +236,7 @@ self.addfile=function()
 	     }  
 	     
 
-	     else if (y)
+	     else if (self.is_veg)
 	     {
 	     	
 	     	self.vegarray.push(self.input_text);
@@ -246,7 +246,7 @@ self.addfile=function()
 	     }
 
 	     
-	     else if (z) 
+	     else if (self.is_dairy) 
 	     {
 	     	
 
