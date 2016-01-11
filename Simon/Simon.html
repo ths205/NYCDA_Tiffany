@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title></title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+<script src="simon.js"></script>
+<script src="simon_services.js"></script>	
+
+<style type="text/css">
+
+    .game{
+    	width:400px;
+    }
+    .button{
+    	width:150px;
+    	height:150px;
+    	display: inline-block;
+    }
+
+    .button.active{
+
+        opacity: 0.5;
+    }
+
+
+</style>	
+
+</head>
+
+<body ng-app="simon_game_app">
+
+<div ng-controller="MainCtrl as ctrl">
+
+    
+    <div class="game">
+    	<div class="button" ng-repeat="color in ctrl.simon.game_colors"
+         
+         ng-style="{'background':color.hex_color}" 
+         
+         ng-class="{active: (color.state=='pressed')}" 
+         
+         ng-click="ctrl.simon.on_button_clicked(color)"
+
+         ng-mousedown="ctrl.simon.on_button_down(color)"
+
+         ng-mouseup="ctrl.simon.on_button_up(color)"></div>
+    </div>
+
+    <button id="button" ng-click="ctrl.simon.start()" ng-hide="(ctrl.simon.state !='idle')">Start</button>
+
+    <!--
+
+    <pre>{{ctrl.simon.state}}   </pre> 
+
+    <div style="float: left; width:200px;">
+        <h3>Computer</h3>
+        <div ng-repeat="color in ctrl.simon.computer_colors track by $index"  ng-bind="color.name" ng-hide="(ctrl.simon.state=='computer turn')"></div>
+    </div> 
+
+    <div style="float: left; width:200px;">
+        <h3>player</h3>
+        <div ng-repeat="color in ctrl.simon.player_colors track by $index" ng-bind="color.name" ng-show="(ctrl.simon.state=='player turn')"></div>
+    </div>
+
+    -->
+
+
+
+      
+     
+	
+
+     </div>
+</div>     
+
+</body>
+
+</html>
