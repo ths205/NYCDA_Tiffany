@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
+<script src="services.js"></script>
+<script src="index_ang_tut.js"></script>
+
+
+</head>
+<body ng-app="ang_tut" ng-controller="MainCtrl as ctrl">
+
+<input type="text" ng-change="ctrl.user_change()" ng-model="ctrl.user_assign" />
+<div ng-repeat="object in ctrl.response_obj">
+<span ng-bind="object.formatted_address"> </span>
+</div>
+
+</body>
+</html>
