@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+
+</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+<script src="Lesson_4_workshop.js"></script>
+<script src="Lesson4_workshop_services.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+<div ng-controller="GradeCtrl as grade_ctrl">	
+	
+<h3>Assignment</h3>	
+<input type="text" name="assignment" ng-model="grade_ctrl.input_assignment"/>
+<h3>Grade</h3>
+<input type="text"  name="grade" ng-model="grade_ctrl.input_grade" />
+
+<button id="button" ng-click="grade_ctrl.AddHw()">Add</button> 
+
+<table>
+<tr>
+<th>Assignment</th>
+<th>Grade</th>	
+</tr>	
+<tr ng-repeat="assign in grade_ctrl.card.hw_grades">
+	
+<td>{{assign.assignment}}
+	
+</td>
+<td>{{assign.grade}}
+
+</td>	
+</tr>	
+
+</table>
+
+
+
+
+</div>
+
+</body>
+
+</html>
