@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
+
+	<script src="services.js"></script>
+
+	<script src="team.js"></script>
+
+</head>
+<body ng-app="team_app" ng-controller="MainCtrl as ctrl">
+<input type="text" ng-change="ctrl.team_change()" ng-model="ctrl.team_assign"/>
+<!--<div ng-repeat="object in ctrl.response_obj"></div>
+<span ng-bind="object.formatted_address"></span>-->
+
+</body>
+</html>
