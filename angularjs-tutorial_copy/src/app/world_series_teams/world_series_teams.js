@@ -52,13 +52,32 @@ angular.module('angularTemplate')
 
 })
 
+.directive('arizonaTeam', function(){
+	return {
+		template:'<h3><Arizona Diamond Backs/h3>'
+
+	};	
+
+})
+
 .directive('redsTeam', function(){
 	return {
 		template:'<h3>Cincinati Reds</h3>'
 
 	};
+})
+
+.directive('angelsTeam', function(){
+	return {
+		template:'<h3>Anaheim Angels</h3>'
+
+	};
 
 })
+
+
+
+
 
 	
 })();
